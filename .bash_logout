@@ -19,6 +19,28 @@ fi
 
 
 
+#aws
+
+in git copy the link
+sudo apt update
+sudo apt-get install docker.io
+sudo apt install git
+sudo apt install nano
+nano index.html .in any codes of html.
+git init
+git add . 
+git commit -m "mycommit" 
+//now to go github
+git remote add orgin <your_repo>
+git push -u orgin master
+snithuja
+//settings in github 
+git clone  <your_repo>
+nano Dockerfile->
+From nginx:alpine
+COPY . /usr/share/nginx/html
+sudo docker build -t myapp . 
+sudo docker run -d -p 80:80 myapp
 
 
 
@@ -27,9 +49,44 @@ fi
 
 
 
+#kubernets
+
+minikube start
+docker login
+minikube version
+minikube status
+kubectl create deployment myngnix --image=ngnix
+kubectl get deployment
+kubectl get pods
+kubectl describe pods 
+kubectl expose deployment myngnix --type-Nodeport --port=80 --target-port=80 --name=myngnix
+kubectl get service myngnix
+kubectl port-forward sevice/myngnix 3080:80
+openbrowser and in url 127.0.0.1-3080
+....
+then open another powershell and 
+minikube dashboard
 
 
-https://github.com/Laxmiprasanna9126/MavenWebProject.git
+
+
+
+# nagioss
+docker pull jasonrivers/nagios:latest
+docker images
+docker run --name nagios4 -d -p 8888:80 jasonrivers/nagios:latest
+docker start -ai nagios4
+
+
+
+
+
+
+
+
+#jenkins
+https://github.com/divya-12360/week4maven.git
+
 I.	Steps for MavenJava Automation:
 Maven Java Automation Steps:
  Step 1: Open Jenkins (localhost:8080)
@@ -95,6 +152,9 @@ Step 2: Create Freestyle Project (e.g., MavenJava_Build)
                       “MavenJava_Test”
 2.	The pipeline is successful if it is in green color as shown ->check the console of the test project
 3.	The test project is successful and all the artifacts are archived successfully
+
+
+https://github.com/Laxmiprasanna9126/MavenWebProject.git
 II. Maven Web Automation Steps:
 └── Step 1: Open Jenkins (localhost:8080)
     ├── Click on "New Item" (left side menu)
